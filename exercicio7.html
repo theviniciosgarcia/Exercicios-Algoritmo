@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Sabor da pizza: <input id="input_sabor_pizza" /><br />
+    Preço da pizza: <input id="input_preco_pizza" /><br />
+    Quantidade de amigos: <input id="input_qtd_amigos" /><br />
+    <button onclick="calcular_valor_pizza()">Ver valor por amigo</button>
+    <div id="div_resultado_calculo"></div>
+  </body>
+</html>
+
+<script>
+  function calcular_valor_pizza() {
+    var valor_pizza = Number(input_preco_pizza.value) * 1.1;
+
+    var qtd_amigos = Number(input_qtd_amigos.value);
+
+    var valor_amigo = valor_pizza / qtd_amigos;
+
+    div_resultado_calculo.innerHTML = `
+  Cada amigo vai colaborar com R$${valor_amigo} para a pizza de ${input_sabor_pizza.value}.
+  `;
+  }
+</script>

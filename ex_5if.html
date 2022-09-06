@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Valor da 1 Nota: <input id="valor_1nt">
+    Valor da 2 Nota: <input id="valor_2nt">
+    Valor da 3 Nota: <input id="valor_3nt">
+    <button onclick="analisar_desempenho()">Analisar desempenho</button>
+    <div id="resultado"></div>
+
+</body>
+</html>
+<script>
+    function analisar_desempenho() {
+        var nota1 = Number (valor_1nt.value);
+        var nota2 = Number (valor_2nt.value);
+        var nota3 = Number (valor_3nt.value);
+        var nota_final = (nota1 + nota2 + nota3) / 3;
+           resultado.innerHTML = `Sua média foi de ${nota_final}<br>`
+        if (nota_final >= 9.4) {
+            resultado.innerHTML += "Parabéns, você é fora de série!"
+        }
+    }
+</script>

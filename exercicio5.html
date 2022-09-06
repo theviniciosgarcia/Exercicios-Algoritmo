@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite um número: <input id="input_numero">
+    <button onclick="criar_tabuada()">
+        Ver tabuada
+    </button>
+    <div id="div_tabuada">
+    </div>
+</body>
+</html>
+
+<script>
+    function criar_tabuada() {
+        div_tabuada.innerHTML = `
+            ${input_numero.value} x 1 = ${Number(input_numero.value) * 1}<br>
+            ${input_numero.value} x 2 = ${Number(input_numero.value) * 2}<br>
+            ${input_numero.value} x 3 = ${Number(input_numero.value) * 3}<br>
+            ${input_numero.value} x 4 = ${Number(input_numero.value) * 4}<br>
+            ${input_numero.value} x 5 = ${Number(input_numero.value) * 5}<br>
+            ${input_numero.value} x 6 = ${Number(input_numero.value) * 6}<br>
+            ${input_numero.value} x 7 = ${Number(input_numero.value) * 7}<br>
+            ${input_numero.value} x 8 = ${Number(input_numero.value) * 8}<br>
+            ${input_numero.value} x 9 = ${Number(input_numero.value) * 9}<br>
+        `
+    }
+</script>

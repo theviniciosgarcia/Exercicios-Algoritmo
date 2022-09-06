@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantidade de latinhas <input id="input_qtd_latinhas"><br>
+    <button onclick="qts_refris()">Quantos Refris?</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function qts_refris() {
+        var latinhas = Number (input_qtd_latinhas.value);
+        var refris = latinhas * 365;
+
+        resultado.innerHTML = `No total você toma ${refris}`
+
+        if (refris >= 500) {
+        resultado.innerHTML += `<br>Cuide melhor da saude`
+        }
+    }
+</script>

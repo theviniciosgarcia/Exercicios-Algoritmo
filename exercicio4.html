@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Votos A: <input id="input_votos_a" /><br />
+    Votos B: <input id="input_votos_b" /><br />
+    Votos nulo: <input id="input_votos_nulo" /><br />
+    Votos branco: <input id="input_votos_branco" /><br />
+    <button onclick="calcular_resultado()">Resultado da eleição</button>
+    <div id="div_resultado"></div>
+  </body>
+</html>
+<script>
+  function calcular_resultado() {
+    var total =
+      Number(input_votos_a.value) +
+      Number(input_votos_b.value) +
+      Number(input_votos_nulo.value) +
+      Number(input_votos_branco.value);
+
+    var porcentagem_votos_A = (Number(input_votos_a.value) / total) * 100;
+    var porcentagem_votos_B = (Number(input_votos_b.value) / total) * 100;
+
+    var total_invalidos =
+      Number(input_votos_nulo.value) + Number(input_votos_branco.value);
+    var porcentagem_invalidos = (total_invalidos / total) * 100;
+
+    div_resultado.innerHTML = `
+            Total de votos: ${total}<br>
+            Candidato A: ${porcentagem_votos_A}% (${input_votos_a.value} votos)<br>
+            Candidato B: ${porcentagem_votos_B}% (${input_votos_b.value} votos)<br>
+            Inválidos: ${porcentagem_invalidos}% (${total_invalidos} votos)
+        `;
+  }
+</script>

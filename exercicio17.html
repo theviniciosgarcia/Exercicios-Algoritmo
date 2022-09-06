@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Valor guardado no cofrinho: R$
+    <span id="span_valor_cofre">0.00</span>
+    Valor para deposito: <input id="input_valor" /><br />
+    <button onclick="depositar()">Depositar</button>
+    <button onclick="retirar_toda_grana()">Tirar toda a grana</button>
+    <button onclick="retirar_grana">Retirar grana</button>
+  </body>
+</html>
+<script>
+  var valor_depositado = 0;
+  function depositar() {
+    /*
+            valor_depositado = valor_depositado + Number(input_valor.value) 
+        */
+    valor_depositado += Number(input_valor.value);
+
+    span_valor_cofre.innerHTML = valor_depositado;
+  }
+
+  function retirar_toda_grana() {
+    valor_depositado = 0;
+    span_valor_cofre.innerHTML = valor_depositado;
+  }
+
+  function retirar_grana() {
+    var grana_a_retirar = Number(input_valor.value);
+    /*
+        valor_depositado = valor_depositado - grana_a_retirar
+    */
+    valor_depositado -= grana_a_retirar;
+    span_valor_cofre.innerHTML = valor_depositado;
+  }
+</script>

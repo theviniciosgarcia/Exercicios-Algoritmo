@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Valor do carro a vista <input id="input_valor_vista"><br>
+    Taxa de juros (a.m) <input id="input_taxa_juros"> <br>
+    Quantidade de parelas <input id="input_qtd_parcelas"> <br>
+
+    <button onclick="calcular_prejuizo()">Calcular preju</button>
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function calcular_prejuizo() {
+        var valor_vista = Number (input_valor_vista.value)
+        var taxa_juros = Number (input_taxa_juros.value)
+        var qtd_parcelas = Number (input_qtd_parcelas.value)
+
+        var a1 = valor_vista / qtd_parcelas;
+        var q = 1 + (taxa_juros / 100);
+        var n = qtd_parcelas;
+
+        var soma_termos = (a1 * (q ** n - 1)) / (q - 1)
+
+        var B = valor_vista * 0.8;
+
+        var C = soma_termos / valor_vista;
+
+        div_resultado.innerHTML = `Seu carro vai sair por um total de R$${soma_termos}. Após 1 mês, ele já vai valer só R$${B}.
+         Porque comprou financiado, vai pagar o correspondente a ${C} carros;`
+        
+         /*
+           Sn = a1 (q n   1)
+                   q  1
+        */
+
+    }
+</script>
+
