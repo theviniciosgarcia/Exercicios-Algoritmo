@@ -60,11 +60,15 @@
     }
 
     function recomecar_comando() {
-        
-        span_pao.innerHTML -= `${pao}`
-        span_carne_bovina.innerHTML -= `${carne}` 
-        span_carne_soja.innerHTML -= `${carne_dsoja}`
-        span_arroz.innerHTML -= `${arroz_fj}`
-        span_calorias.innerHTML -= `${calorias}`
+        pao = 0;
+        carne = 0;
+        carne_dsoja = 0;
+        arroz_fj = 0;
+        calorias = 0;
+        span_pao.innerHTML = 0;
+        span_carne_bovina.innerHTML = 0;
+        span_carne_soja.innerHTML = 0;
+        span_arroz.innerHTML = 0;
+        span_calorias.innerHTML = 0;
     }
 </script>
