@@ -16,7 +16,8 @@
 <script>
     function calcular_area() {
         var circuferencia = Number (valor_circuferencia.value);
-        var final = Number (circuferencia * 3,14);
+        var final = Number (3.14 * circuferencia ** 2)
         resultado.innerHTML = `${final}`
     }
 </script>
+

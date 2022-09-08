@@ -18,7 +18,7 @@
     function calcular_imc() {
         var peso = Number (qtd_peso.value);
         var altura = Number (qtd_altura.value);
-        var imc = Number (peso / (altura * altura));
+        var imc = Number (peso / altura ** 2);
         resultado.innerHTML = `${imc}`
     }
 </script>

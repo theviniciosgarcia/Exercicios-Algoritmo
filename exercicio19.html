@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Porções de pão francês: <span id="span_pao">0</span>  <br>
+    Porções de carne boniva: <span id="span_carne_bovina">0</span>   <br>
+    Porções de carne de soja: <span id="span_carne_soja">0</span>   <br>
+    Porções de arroz com feijão: <span id="span_arroz">0</span>  <br>
+    Total de calorias: <span id="span_calorias">0</span>    <br>
+    
+    <button onclick="pao_frances()">COMER PORÇÃO PÃO FRANCES</button> <br>
+    <button onclick="carne_bovina()">COMER PORÇÃO CARNE BOVINA</button> <br>
+    <button onclick="carne_soja()">COMER PORÇÃO CARNE SOJA</button> <br>
+    <button onclick="arroz_feijao()">COMER PORÇÃO DE ARROZ E FEIJÃO</button> <br>
+    <button onclick="recomecar_comando()">RECOMEÇAR</button>
+</body>
+</html>
+
+<script>
+    var pao = 0;
+    var carne = 0;
+    var carne_dsoja = 0;
+    var arroz_fj = 0;
+    var calorias = 0;
+
+    function pao_frances() {
+        pao += 1;
+        calorias += 50;
+        span_pao.innerHTML = `${pao}`
+        span_calorias.innerHTML = `${calorias}`
+    
+    }
+
+    function carne_bovina() {
+        carne += 1;
+        calorias += 100;
+        span_carne_bovina.innerHTML = `${carne}`
+        span_calorias.innerHTML = `${calorias}`
+    
+    }
+    
+    function carne_soja() {
+        carne_dsoja += 1;
+        calorias += 30;
+        span_carne_soja.innerHTML = `${carne_dsoja}`
+        span_calorias.innerHTML = `${calorias}`
+    
+    }
+
+    function arroz_feijao() {
+        arroz_fj += 1;
+        calorias += 120;
+        span_arroz.innerHTML = `${arroz_fj}`
+        span_calorias.innerHTML = `${calorias}`
+    }
+
+    function recomecar_comando() {
+        
+        span_pao.innerHTML -= `${pao}`
+        span_carne_bovina.innerHTML -= `${carne}` 
+        span_carne_soja.innerHTML -= `${carne_dsoja}`
+        span_arroz.innerHTML -= `${arroz_fj}`
+        span_calorias.innerHTML -= `${calorias}`
+    }
+</script>

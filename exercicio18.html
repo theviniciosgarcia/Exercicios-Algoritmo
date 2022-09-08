@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    Porções de pão francês: <span id="span_pao"></span>  <br>
-    Porções de carne boniva: <span id="span_carne_bovina"></span>   <br>
-    Porções de carne de soja: <span id="span_carne_soja"></span>   <br>
-    Porções de arroz com feijão: <span id="span_arroz"></span>  <br>
-    Total de calorias: <span id="span_calorias"></span>    <br>
-    
-    <button onclick="pao_frances()">COMER PORÇÃO PÃO FRANCES</button> <br>
-    <button onclick="carne_bovina()">COMER PORÇÃO CARNE BOVINA</button> <br>
-    <button onclick="arroz_feijao()">COMER PORÇÃO DE ARROZ E FEIJÃO</button> <br>
-    <button onclick="recomeçar_comando()">RECOMEÇAR</button>
-</body>
+  </head>
+  <body>
+    Valor guardado no cofrinho: R$
+    <span id="span_valor_cofre">0.00</span> <br>
+    Quantidade de depositos feitos:
+    <span id="span_depositos_feitos">0</span> <br>
+    Quantidade de retiradas feitas:
+    <span id="span_retiradas_feitas">0</span> <br>
+    Valor para deposito: <input id="input_valor" /><br />
+    <button onclick="depositar()">Depositar</button>
+    <button onclick="retirar_toda_grana()">Tirar toda a grana</button>
+    <button onclick="retirar_grana">Retirar grana</button>
+  </body>
 </html>
+<script>  
+  var valor_depositado = 0;
+  var depositos_feitos = 0;
+  var retiradas_feitas = 0;
+  function depositar() {
+    /*
+            valor_depositado = valor_depositado + Number(input_valor.value) 
+        */
 
-<script>
-    var pao = 0
-    var carne = 0
-    var arroz_fj = 0
-    var calorias = 0
+    valor_depositado += Number(input_valor.value);
+    depositos_feitos = valor_depositado += 0
+    span_valor_cofre.innerHTML = valor_depositado;
 
-    function pao_frances() {
-        var comer_pao = Number (span_pao.value + 50)
-        
-    }
+    span_depositos_feitos.innerHTML = depositos_feitos
 
+    
+  }
+
+  function retirar_toda_grana() {
+    valor_depositado = 0;
+    span_valor_cofre.innerHTML = valor_depositado;
+  }
+
+  function retirar_grana() {
+    var grana_a_retirar = Number(input_valor.value);
+    retiradas_feitas += Number (grana_a_retirar = 1);
+    /*
+        valor_depositado = valor_depositado - grana_a_retirar
+    */
+    valor_depositado -= grana_a_retirar;
+    span_valor_cofre.innerHTML = valor_depositado;
+  }
 </script>

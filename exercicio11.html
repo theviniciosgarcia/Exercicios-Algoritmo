@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Solicitar número: <input id="valor_numero">
+    <button onclick="raiz_quadrada()">EXIBIR RAIZ QUADRADA</button>
+    <button onclick="raiz_cubica()">EXIBIR RAIZ CUBICA</button>
+    <div id= resultado></div>
+</body>
+</html>
+
+<script>
+
+    function raiz_quadrada() {
+    var numero = Number (valor_numero.value)
+    var quadrada = Number (numero ** (1/2));
+    resultado.innerHTML = `A raiz quadrada  é de: ${(quadrada)}`    
+    }    
+    
+    function raiz_cubica() {
+        var numero = Number (valor_numero.value)
+        var cubica = Number (numero ** (1/3));
+        resultado.innerHTML = `A cubica  é de: ${(cubica)}`
+    }
+</script>

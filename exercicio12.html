@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite um numero: <input id="valor_numero1">
+    Digite outro numero: <input id="valor_numero2">
+    <button onclick="calcular_potencia()">FAZER POTENCIA</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function calcular_potencia() {
+        var numero1 = Number (valor_numero1.value);
+        var numero2 = Number (valor_numero2.value);
+        var potencia = Number (numero1 ** numero2)
+        resultado.innerHTML = `${numero1} elevado a ${numero2} dá ${potencia}`
+        
+    }
+</script>
