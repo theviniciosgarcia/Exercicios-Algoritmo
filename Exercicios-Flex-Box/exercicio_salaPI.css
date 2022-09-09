@@ -1,0 +1,55 @@
+.container {
+    background-color: rgb(143, 128, 128);
+    display: flex;
+    margin: 10px auto;
+}
+
+.start {
+    justify-content: flex-start;
+}
+
+.end {
+    justify-content: flex-end;
+}
+
+.center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.style-nome {
+    justify-content: space-evenly;
+}
+
+
+
+.filho {
+    width: 50px;
+    margin: 5px;
+    height: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.azul-claro {
+    background-color: #63b1bc;
+}
+
+.azul-escuro {
+    background-color: #1f2a1f;
+}
+
+.rosa {
+    background-color: #ed145b;
+}
+
+.amarelo {
+    background-color: #efb661;
+}

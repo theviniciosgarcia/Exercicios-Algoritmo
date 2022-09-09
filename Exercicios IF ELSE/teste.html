@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Insira a quantidade de partidas jogadas: <input type="text" id="inputPartidasJogadas"><br>
+  Insira a quantidade de gols marcados: <input type="text" id="inputGols">
+  <button onclick="estudarAtacante()">
+    Estudar atacante
+  </button>
+  <div id="divResultado"></div> 
+</body>
+</html>
+<script>
+  function estudarAtacante(){
+    var golsPorPartida = Number(inputGols.value) / Number(inputPartidasJogadas.value)
+
+    if(golsPorPartida < 0.2){
+      divResultado.innerHTML = `Melhor mudar de posição <br> <img src="https://i.superesportes.com.br/grDP9WcraF-9_lCzIQpFxuU0am0=/750x0/smart/imgsapp.mg.superesportes.com.br/app/noticia_126420360808/2020/01/08/3828886/20200107215722473366i.jpg" alt="Ribamar">`
+    } else {
+      if(golsPorPartida <= 0.6){
+        divResultado.innerHTML = `Atacante mediano <br> <img src="https://cms.somosfanaticos.com/__export/1661131180561/sites/fanaticos/img/2022/08/21/ronyx_do_palmeirasx_exala_confianxa_e_garante_que_teria_espaxo_em_gigante_da_premier_league_sem_dxvida_nenhuma.jpg_1159711837.jpg" alt="Roni">`
+    } else {
+      divResultado.innerHTML = `Atacante de futuro <br> <img src="https://www.lance.com.br/files/article_main/uploads/2018/11/15/5bedcf90501e4.jpeg" alt="Ronaldo Fenômeno">`
+    }
+  }
+    divResultado.innerHTML += `<br> Sua média de gols/partida é de ${golsPorPartida}`
+  
+  }
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Solicitar Frequencia: <input id="valor_frequencia">
+    <button onclick="analisar_frequencia()">ANALISAR FREQUENCIA</button>
+    <div id="resultado"</div>
+</body>
+</html>
+
+<script>
+    function analisar_frequencia() {
+        var frequencia = Number (valor_frequencia.value);
+
+         if (frequencia < 50) {
+            resultado.innerHTML = `<img src= "https://th.bing.com/th/id/OIP.3dX4OIlH0iPIx63dO3ZRiAHaFg?pid=ImgDet&rs=1>">`
+         }
+         
+         else {
+            resultado.innerHTML = `<img src= "https://th.bing.com/th/id/R.5d8fe0134f67a90f4353daba6ae2299a?rik=%2f7Dioj5t%2fEXLEA&pid=ImgRaw&r=0">`
+         }
+
+    }
+</script>

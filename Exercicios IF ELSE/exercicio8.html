@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Solicitar quantas partidas o atacante jogou: <input id="input_partidas">
+    Solicitar quantidade de gols: <input id="input_gol">
+    <button onclick="estudar_atacante()">ESTUDAR ATACANTE</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function estudar_atacante() {
+        var atacante = Number (input_gol.value) / Number (input_partidas.value);
+
+        if (atacante < 0.2) {
+            resultado.innerHTML = `Melhor mudar de posição. <br> <img src= "https://cdn.meutimao.com.br/_upload/jogador/cleiton_eduardo_vicente_3_corinthians.jpg">`
+        }
+
+        else {
+        if (atacante <= 0.6) {
+        resultado.innerHTML = `Atacante mediano <br> <img src= "https://th.bing.com/th/id/R.0b2e8af9dff8f1733187283df076eb7f?rik=1WKyjanKaCgQIg&pid=ImgRaw&r=0">`
+
+        } 
+        
+        else {
+           resultado.innerHTML = `Atacante de futuro <br> <img src= "https://th.bing.com/th/id/R.5d3c13517a83c801b53499888a3ff1d2?rik=soQvw8BqR%2fs1cA&pid=ImgRaw&r=0">`
+        }
+
+        }
+            resultado.innerHTML += `Sua média de gols/partida é de ${atacante}`
+        
+    
+
+    }
+</script>

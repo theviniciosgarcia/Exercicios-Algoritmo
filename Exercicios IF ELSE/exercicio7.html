@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quanto tempo deixou o arroz cozinhando: <input id="input_tempo">
+    <button onclick="provar_arroz()">PROVAR ARROZ</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function provar_arroz() {
+        if (input_tempo.value == 5) {
+            resultado.innerHTML = `Parabéns! Arroz perfeito! <br> <img src= "https://xtudoreceitas.com/wp-content/uploads/Arroz-Branco.jpg" alt ="Arroz">`
+        }
+
+        else {
+            resultado.innerHTML = `Arroz cru ou cozido demais! <br> <img src= "https://t2.uc.ltmcdn.com/pt/posts/1/9/9/o_que_fazer_se_o_arroz_queimar_12991_600_square.jpg" alt ="Arroz">`
+        }
+    }
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Solicitar temperatura do ambiente: <input id="input_valor_temperatura">
+    <button onclick="verificar_clima()">VERIFICAR CLIMA</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function verificar_clima() {
+        var temperatura = Number (input_valor_temperatura.value);
+        if (temperatura < 10) {
+        resultado.innerHTML = `Apropriada p/ conservar alimento. <br> <img src="https://calidadtdf.com.ar/data/img_cont/img_imagenes/img_gr/1298_1341.jpg">`
+        }  
+
+        else {
+        resultado.innerHTML = `Inapropriada p/ conservar alimento. <br> <img src="https://sumimedical.com/wp-content/uploads/2019/02/alimentos-en-mal-estado-768x472.jpg">`
+        }
+    }
+
+</script>

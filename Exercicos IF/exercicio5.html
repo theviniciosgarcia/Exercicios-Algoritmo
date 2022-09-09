@@ -21,7 +21,7 @@
         var nota2 = Number (valor_2nt.value);
         var nota3 = Number (valor_3nt.value);
         var nota_final = (nota1 + nota2 + nota3) / 3;
-           resultado.innerHTML = `Sua média foi de ${nota_final}<br>`
+           resultado.innerHTML = `Sua média foi de ${nota_final.toFixed(1)}<br>`
         if (nota_final >= 9.4) {
             resultado.innerHTML += "Parabéns, você é fora de série!"
         }

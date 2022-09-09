@@ -8,7 +8,8 @@
 </head>
 <body>
     Valor da pizza: <input id="valor_pizza"> <br>
-    Quantidade de amigos: <input id="qtd_amigos">
+    Quantidade de amigos: <input id="qtd_amigos"> <br>
+    Valor maximo: <input id="valor_maximo">
     <button onclick="comer_pizza()">Rola a Pizza</button>
     <div id= resultado></div>
 </body>
@@ -16,12 +17,19 @@
 
 <script>
     function comer_pizza() {
+        var valor_mx = Number (valor_maximo.value);
         var valor = Number (valor_pizza.value);
         var qtd_amg = Number (qtd_amigos.value);
         var final_valor = (valor / qtd_amg);
-         resultado.innerHTML = `Cada amigo vai pagar R$${final_valor} pela pizza`
-        if (final_valor >= 20 ) {
-            resultado.innerHTML += ` Deu ruim! Pizza muito cara!` 
+        
+
+        if (final_valor < valor_mx ) {
+            resultado.innerHTML = `Uhu! Vamos pedir a pizza!".`
+
+        }
+
+        else {
+            resultado.innerHTML = `Deu ruim! Pizza muito cara!` 
         }
 
     }

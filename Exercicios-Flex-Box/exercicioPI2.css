@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(66, 71, 56);
+}
+
+.container-desafio {
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.filho-amarelo {
+    background-color: #efb661;
+    width: 50px;
+    margin: 5px;
+    height: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.filho-rosa {
+    background-color: #ed145b;
+    width: 50px;
+    margin: 5px;
+    height: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.filho-azul-escuro {
+    background-color: #1f2a1f;
+    width: 50px;
+    margin: 5px;
+    height: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.filho-azul-claro {
+    background-color: #63b1bc;
+    width: 50px;
+    margin: 5px;
+    height: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+    
+
