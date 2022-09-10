@@ -5,12 +5,14 @@
 }
 
 .container {
+    height: 650px;
+    display: flex;
     box-sizing: border-box;
 }
 
 .exercicioB {
-    justify-content: space-between;
-   
+    align-items: flex-start;
+    flex-direction: row-reverse;
 }
 
 .filho {
@@ -19,22 +21,23 @@
     height: 50px;
     text-align: center;
     border-radius: 5px;
-    
 }
 
-.amarelo {
-    background-color: #efb661;
-}
-
-.rosa {
-    background-color: #ed145b;
+.azul-claro {
+    background-color: #63b1bc;
 }
 
 .azul-escuro {
     background-color: #1f2a1f;
 }
 
-.azul-claro {
-    background-color: #63b1bc;
+.rosa {
+    background-color: #ed145b;
 }
+
+.amarelo {
+    background-color: #efb661;
+}
+
+
     
