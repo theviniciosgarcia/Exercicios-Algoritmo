@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos pães francês comeu no dia: <input id="input_pao"> <br>
+    Quantos pacotes de bolachas comeu no dia: <input id="input_bolacha"> <br>
+    Quantos copos de achocolatado tomou no dia: <input id="input_achocolatado"> <br>
+    <button onclick="verficar_calorias()">
+        VERIFICAR CALORIAS
+    </button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function verficar_calorias() {
+        var pao = Number (input_pao.value);
+        var bolacha = Number (input_bolacha.value);
+        var achocolatado = Number (input_achocolatado.value);
+        var calorias = (pao * 50) + (bolacha * 80) + (achocolatado * 70);
+
+        if (calorias < 200) {
+            resultado.innerHTML = `Está perdendo peso`
+        }
+        else if (calorias <= 400) {
+            resultado.innerHTML = `Nem lá, nem cá. Vai manter a forma`
+        }
+        else {
+            resultado.innerHTML = `Forte tendência á ganhar peso !`
+        }
+
+    }
+</script>

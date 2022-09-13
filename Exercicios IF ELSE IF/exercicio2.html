@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Solicitar a renda familiar mensal: <input id="input_renda_mensal"> <br>
+    <button onclick="verficar_situacao()">
+        VERIFICAR SITUAÇÃO
+    </button>
+<div id="resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function verficar_situacao() {
+        var mensal = Number (input_renda_mensal.value);
+        if (mensal <= 250) {
+        resultado.innerHTML = `Classe E`
+        }
+        else if (mensal <= 900) {
+        resultado.innerHTML = `Classe D`
+        }
+        else if (mensal <= 2500) {
+        resultado.innerHTML = `Classe C`
+        }
+        else if (mensal <= 9500) {
+        resultado.innerHTML = `Classe B`
+        }
+        else 
+        resultado.innerHTML = `Classe A`
+    }
+</script>

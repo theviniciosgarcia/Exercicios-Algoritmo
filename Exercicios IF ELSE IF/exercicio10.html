@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="nota_1()">
+    NOTA 1
+    </button> <br>
+    <button onclick="nota_2()">
+    NOTA 2
+    </button> <br>
+    <button onclick="nota_3()">
+    NOTA 3
+    </button>
+    <button onclick="nota_4()">
+    NOTA 4
+    </button>
+    <button onclick="nota_5()">
+    NOTA 5
+    </button>
+
+    Sua avaliação: <span id="media"><b>0</b></span>
+
+    <div id="resultado"></div>
+   
+
+</body>
+</html>
+
+<script>
+    //  qtd nota / qtd cliques //
+    
+    var cliques = 0 
+    var nota = 0
+
+    function nota_1() {
+    cliques += 1
+    nota += 1
+    var calculo = nota / cliques
+    media.innerHTML = calculo.toFixed(1)
+    if (calculo < 2) {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/R.8136dc0edb1618457a446bcf7259322b?rik=EIPE%2fHYRxJn3hg&pid=ImgRaw&r=0">`
+    }
+    else if (calculo <= 3) {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.snF-JZjlX26WS6OhwyR8kwHaFj?w=225&h=180&c=7&r=0&o=5&pid=1.7">`
+    }
+    else if (calculo <= 4.5) {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.c8kuhM-D4iGqTFExPrt6uAHaHs?w=143&h=180&c=7&r=0&o=5&pid=1.7">`
+    }
+    else {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.85gswy5VAm7muNdOwwhsFwHaLH?w=119&h=180&c=7&r=0&o=5&pid=1.7>"`
+    }
+    }
+
+    function nota_2() {
+    cliques += 1
+    nota += 2
+    var calculo = nota / cliques
+    media.innerHTML = calculo.toFixed(1)
+    if (calculo < 2) {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/R.8136dc0edb1618457a446bcf7259322b?rik=EIPE%2fHYRxJn3hg&pid=ImgRaw&r=0">`
+    }
+    else if (calculo <= 3) {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.snF-JZjlX26WS6OhwyR8kwHaFj?w=225&h=180&c=7&r=0&o=5&pid=1.7">`
+    }
+    else if (calculo <= 4.5) {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.c8kuhM-D4iGqTFExPrt6uAHaHs?w=143&h=180&c=7&r=0&o=5&pid=1.7">`
+    }
+    else {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.85gswy5VAm7muNdOwwhsFwHaLH?w=119&h=180&c=7&r=0&o=5&pid=1.7"`
+    }
+    }
+
+    function nota_3() {
+    cliques += 1
+    nota += 3
+    var calculo = nota / cliques
+    media.innerHTML = calculo.toFixed(1)
+    if (calculo < 2) {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/R.8136dc0edb1618457a446bcf7259322b?rik=EIPE%2fHYRxJn3hg&pid=ImgRaw&r=0">`
+    }
+    else if (calculo <= 3) {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.snF-JZjlX26WS6OhwyR8kwHaFj?w=225&h=180&c=7&r=0&o=5&pid=1.7">`
+    }
+    else if (calculo <= 4.5) {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.c8kuhM-D4iGqTFExPrt6uAHaHs?w=143&h=180&c=7&r=0&o=5&pid=1.7">`
+    }
+    else {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.85gswy5VAm7muNdOwwhsFwHaLH?w=119&h=180&c=7&r=0&o=5&pid=1.7"`
+    }
+    }
+
+    function nota_4() {
+    cliques += 1
+    nota += 4
+    var calculo = nota / cliques
+    media.innerHTML = calculo.toFixed(1)
+    if (calculo < 2) {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/R.8136dc0edb1618457a446bcf7259322b?rik=EIPE%2fHYRxJn3hg&pid=ImgRaw&r=0">`
+    }
+    else if (calculo <= 3) {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.snF-JZjlX26WS6OhwyR8kwHaFj?w=225&h=180&c=7&r=0&o=5&pid=1.7">`
+    }
+    else if (calculo <= 4.5) {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.c8kuhM-D4iGqTFExPrt6uAHaHs?w=143&h=180&c=7&r=0&o=5&pid=1.7">`
+    }
+    else {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.85gswy5VAm7muNdOwwhsFwHaLH?w=119&h=180&c=7&r=0&o=5&pid=1.7"`
+    }
+    }
+
+    function nota_5() {
+    cliques += 1
+    nota += 5
+    var calculo = nota / cliques
+    media.innerHTML = calculo.toFixed(1)
+    if (calculo < 2) {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/R.8136dc0edb1618457a446bcf7259322b?rik=EIPE%2fHYRxJn3hg&pid=ImgRaw&r=0">`
+    }
+    else if (calculo <= 3) {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.snF-JZjlX26WS6OhwyR8kwHaFj?w=225&h=180&c=7&r=0&o=5&pid=1.7">`
+    }
+    else if (calculo <= 4.5) {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.c8kuhM-D4iGqTFExPrt6uAHaHs?w=143&h=180&c=7&r=0&o=5&pid=1.7">`
+    }
+    else {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.85gswy5VAm7muNdOwwhsFwHaLH?w=119&h=180&c=7&r=0&o=5&pid=1.7"`
+    }
+    }
+</script>
+

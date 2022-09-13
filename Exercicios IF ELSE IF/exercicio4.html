@@ -22,8 +22,7 @@
             resultado.innerHTML = `Melhor mudar de posição. <br> <img src= "https://cdn.meutimao.com.br/_upload/jogador/cleiton_eduardo_vicente_3_corinthians.jpg">`
         }
 
-        else {
-        if (atacante <= 0.6) {
+        else if (atacante <= 0.6) {
         resultado.innerHTML = `Atacante mediano <br> <img src= "https://th.bing.com/th/id/R.0b2e8af9dff8f1733187283df076eb7f?rik=1WKyjanKaCgQIg&pid=ImgRaw&r=0">`
 
         } 
@@ -32,10 +31,8 @@
            resultado.innerHTML = `Atacante de futuro <br> <img src= "https://th.bing.com/th/id/R.5d3c13517a83c801b53499888a3ff1d2?rik=soQvw8BqR%2fs1cA&pid=ImgRaw&r=0">`
         }
 
-        }
+        
             resultado.innerHTML += `Sua média de gols/partida é de ${atacante.toFixed(1)}`
         
-    
-
     }
 </script>

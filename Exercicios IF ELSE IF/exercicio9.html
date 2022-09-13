@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Você já clicou: <span id="span_clique"><b>0</b>
+    </span> <br>
+    <button onclick="clica_aqui()">
+        CLICA AQUI
+    </button>
+    <div id="resultado"></div>
+
+</body>
+</html>
+
+<script>
+    var clique = 0
+    function clica_aqui() {
+    clique += 1 
+    span_clique.innerHTML = clique
+    if (clique < 5) {
+        resultado.innerHTML = `Dedo fraquinho, hein`
+    }
+    else if (clique <= 10) {
+        resultado.innerHTML = `Na média - não me impressiona ...`
+    }
+    else if (clique <- 15) {
+        resultado.innerHTML = `Está treinando em casa !`
+    }
+    else {
+        resultado.innerHTML = `Mestre dos cliques !!!`
+    }
+
+    }
+</script>
