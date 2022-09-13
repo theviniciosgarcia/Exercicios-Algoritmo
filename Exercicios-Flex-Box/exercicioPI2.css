@@ -6,23 +6,12 @@
 
 .container-desafio {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     box-sizing: border-box;
-    flex-direction: row-reverse;
-
 }
 
-.filho-azul-claro {
-    background-color: #63b1bc;
-    width: 50px;
-    margin: 5px;
-    height: 50px;
-    text-align: center;
-    border-radius: 5px;
-}
-
-.filho-azul-escuro {
-    background-color: #1f2a1f;
+.filho-amarelo {
+    background-color: #efb661;
     width: 50px;
     margin: 5px;
     height: 50px;
@@ -39,8 +28,17 @@
     border-radius: 5px;
 }
 
-.filho-amarelo {
-    background-color: #efb661;
+.filho-azul-escuro {
+    background-color: #1f2a1f;
+    width: 50px;
+    margin: 5px;
+    height: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.filho-azul-claro {
+    background-color: #63b1bc;
     width: 50px;
     margin: 5px;
     height: 50px;
