@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="times">
+        <option value="corinthians">Corinthians</option>
+        <option value="sao_paulo">São Paulo</option>
+        <option value="santos">Santos</option>
+        <option value="bragantino">Bragantino</option>
+    </select>
+    <button onclick="ver_escudo()">VER ESCUDO</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function ver_escudo() {
+    var escudo = times.value
+    if (escudo == 'corinthians') {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.4h_LcMwtUvKFwJbbZ2kxJgHaJQ?w=173&h=216&c=7&r=0&o=5&pid=1.7" alt = "Corinthians">`
+    }
+    else if (escudo == 'sao_paulo') {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.JfQYZsvXMdizzORvTMbqEwHaHY?w=185&h=184&c=7&r=0&o=5&pid=1.7" alt = "São Paulo">`
+    }
+    else if (escudo == 'santos') {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.LerYOHr2GJkcRT1PqMkFugHaHQ?w=206&h=202&c=7&r=0&o=5&pid=1.7" alt = "Santos">`
+    }
+    else {
+    resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.Hxx3n99bmvQFxAjcYiQD4wHaHa?w=160&h=180&c=7&r=0&o=5&pid=1.7" alt = "Bragantino">`
+    }
+}
+</script>

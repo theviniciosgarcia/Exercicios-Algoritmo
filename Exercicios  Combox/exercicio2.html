@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Solicitar nome: <input id="input_nome">
+
+    <select id="para_beber">
+        <option value="0.00">Nenhum</option>
+        <option value="3.00">Agua</option>
+        <option value="8.00">Refrigerante</option>
+        <option value="6.00">Cerveja</option>
+    </select>
+
+    <select id="para_comer">
+        <option value="10.00">Salada</option>
+        <option value="13.00">Feijoada</option>
+        <option value="15.00">Bife a Cavalo</option>
+        <option value="20.00">Peixe Frito</option>
+    </select>
+
+    <button onclick="total_pagar()">Total a Pagar</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function total_pagar() {
+        var nome = input_nome.value
+        var total = Number (para_beber.value) + Number (para_comer.value) 
+        resultado.innerHTML = `Olá, ${nome}. Seu almoço vai custar um total de R$${total.toFixed(2)}`
+    }
+    </script>

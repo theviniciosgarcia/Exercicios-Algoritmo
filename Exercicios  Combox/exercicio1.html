@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="estacoes">
+        <option value="inverno">Janeiro</option>
+        <option value="inverno">Fevereiro</option>
+        <option value="primavera">Março</option>
+        <option value="primavera">Abril</option>
+        <option value="primavera">Maio</option>
+        <option value="verao">Junho</option>
+        <option value="verao">Julho</option>
+        <option value="verao">Agosto</option>
+        <option value="outono">Setembro</option>
+        <option value="outono">Outubro</option>
+        <option value="outono">Novembro</option>
+        <option value="inverno">Dezembro</option>
+    </select>
+    <button onclick="ver_estacao()">Ver Estação</button>
+    <div id="resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function ver_estacao() {
+    var ano_estacao = estacoes.value
+     if (ano_estacao == 'primavera') {
+     resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.WWS5Bt4M2Y3Ys_Sk6XbRjwHaEz?w=255&h=180&c=7&r=0&o=5&pid=1.7" alt = "primavera">`
+     }
+     else if (ano_estacao == 'verao') {
+        resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.2xGBwOZYnMJEdf_sr-iRYQHaEK?w=288&h=180&c=7&r=0&o=5&pid=1.7" alt = "verao">`
+     }
+     else if (ano_estacao == 'outono') {
+        resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP._HzS9vbY4ohX5tbtNkzRwwHaF7?w=215&h=180&c=7&r=0&o=5&pid=1.7" alt = "outono">`
+     }
+     else {
+        resultado.innerHTML = `<img src = https://th.bing.com/th/id/OIP.PIbFtbb3HQ-sTl7YqIRxBwHaDt?w=348&h=174&c=7&r=0&o=5&pid=1.7' alt = "inverno">`
+     }
+
+}
+</script>
