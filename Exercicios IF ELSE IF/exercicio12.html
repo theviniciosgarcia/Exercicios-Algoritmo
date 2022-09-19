@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informar um ano: <input id="valor_ano">
+    <button onclick="ver_fato()">VER FATO</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function ver_fato() {
+        var ano = Number(valor_ano.value);
+        
+        if (ano < 1965) {
+        resultado.innerHTML = `No ano ${ano} o email nem havia sido criado ainda ...`
+        }
+
+        else if (ano == 1965) {
+        resultado.innerHTML = `No ano ${ano} o email estava sendo criado ... `
+        }
+
+        else if (ano <= 1969) {
+        resultado.innerHTML = `No ano ${ano} o email já havia sido criado ...`
+        }
+
+        else {
+        resultado.innerHTML = `No ano ${ano} o email já havia sido aprimorado - Poderia ser enviado para outro computador ...`
+        }
+
+    }
+</script>
