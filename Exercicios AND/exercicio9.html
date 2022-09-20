@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual tipo de arroz sera usado?
+    <select id="tipo_arroz">
+        <option value="integral">INTEGRAL</option>
+        <option value="branco">BRANCO</option>
+    </select> <br>
+    Qual é o tempo de cozimento?
+    <select id="tempo_arroz">
+        <option value="20_minutos">20 MINUTOS</option>
+        <option value="10_minutos">10 MINUTOS</option>
+    </select> <br>
+
+    Qual é a quantidade de sal usada?
+    <select id="qtd_sal">
+        <option value="15g">15G</option>
+        <option value="10g">10G</option>
+    </select> <br>
+
+    <button onclick="avaliar_arroz()">AVALIAR ARROZ</button>
+    <div id="resultado"></div>
+
+</body>
+</html>
+
+<script>
+   
+    function avaliar_arroz() {
+        var arroz = (tipo_arroz.value);
+        var tempo = (tempo_arroz.value);
+        var sal = (qtd_sal.value);
+
+        if (arroz == 'branco' && tempo == '10_minutos' && sal == '10g' || arroz == 'integral' && tempo == '20_minutos' && sal == '15g') {
+        resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.A644Jilw5WfhLAtxbN7bdgHaEK?w=302&h=180&c=7&r=0&o=5&pid=1.7" alt "Arroz Perfeito">`
+        } 
+
+        else {
+        resultado.innerHTML = `<img src = "https://th.bing.com/th/id/OIP.nmpFe3GX0DI8GwSdknsXjgHaD2?w=293&h=180&c=7&r=0&o=5&pid=1.7" alt "Seu arroz não esta perfeito">`
+        }
+
+    }    
+</script>

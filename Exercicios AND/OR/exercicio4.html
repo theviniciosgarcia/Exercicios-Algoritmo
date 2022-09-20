@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    O que você como no café da manhã: 
+    <select id="cafe_manha">
+        <option value="ovos">OVOS</option>
+        <option value="leite_de_arroz">LEITE DE ARROZ</option>
+        <option value="bacon">BACON</option>
+    </select>
+
+    O que você come no almoço:
+    <select id="almocar">
+        <option value="bife">BIFE</option>
+        <option value="hamburger_de_soja">HAMBURGUER DE SOJA</option>
+        <option value="frango_gralhado">FRANGO GRELHADO</option>
+    </select>
+
+    o que você come no jantar:
+    <select id="jantar">
+        <option value="picanha_de_soja">PICANHA DE SOJA</option>
+        <option value="cupim">CUPIM</option>
+        <option value="coracao">CORAÇÂO</option>
+    </select>
+    <button onclick="sou_vegano()">SOU VEGANO</button>
+</body>
+</html>
+
+<script>
+    function sou_vegano() {
+        var cafe = (cafe_manha.value);
+        var almoco = (almocar.value);
+        var janta = (jantar.value);
+
+        if (cafe == 'leite_de_arroz' && almoco == 'hamburger_de_soja' && janta == 'picanha_de_soja') {
+            alert("Sim, você é vegano!") 
+        }
+        else {
+            alert("Não, você não é vegano")
+        }
+    }
+</script>

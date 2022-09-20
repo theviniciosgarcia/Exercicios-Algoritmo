@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Solicitar renda individual: <input id="valor_individual">
+    Solicitar renda familiar: <input id="valor_familiar">
+    <button onclick="terei_beneficio()">Terei o benefício ?</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function terei_beneficio() {
+        var renda_ind = Number(valor_individual.value);
+        var renda_fam = Number(valor_familiar.value);
+        if (renda_ind <= 2000 || renda_fam <= 3000) {
+        resultado.innerHTML = `Você terá direito ao auxílio`
+        }
+        else {
+            resultado.innerHTML = `Sem direito ao auxílio`
+        }
+    }
+</script>

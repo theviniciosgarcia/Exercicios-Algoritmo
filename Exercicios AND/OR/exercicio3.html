@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Solicitar Temperatura: <input id="valor_temperatura"> <br>
+    <button onclick="ver_temperatura()">Ver Temperatura</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function ver_temperatura() {
+        var temperatura = Number(valor_temperatura.value);
+        if (temperatura == 22 || temperatura == 23) {
+        resultado.innerHTML = `Temperatura confortável`
+        }
+
+        else {
+            resultado.innerHTML = `Temperatura não está confortável`
+        }
+    }
+</script>
