@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Solicitar a nota da avaliação: <input id="valor_nota">
+    <button onclick="avaliar()">AVALIAR</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function avaliar() {
+        var avaliacao = Number(valor_nota.value);
+        if (avaliacao < 0 || avaliacao > 5) {
+        alert(`Nota inválida`)
+        }
+        else if (avaliacao < 0.5) {
+        resultado.innerHTML = `<img src="./sem_estrelas.png">`
+        }
+        else if (avaliacao >= 0.5 && avaliacao <= 1) {
+        resultado.innerHTML = `<img src="./meia_estrela.png">`
+        }
+        else if (avaliacao > 1 && avaliacao <= 1.5) {
+        resultado.innerHTML = `<img src="./uma_estrela.png">`
+        }
+        else if (avaliacao > 1.5 && avaliacao <= 2) {
+        resultado.innerHTML = `<img src="./uma_estrela_e_meia.png">`
+        }
+        else if (avaliacao > 2 && avaliacao <= 2.5) {
+        resultado.innerHTML = `<img src="./duas_estrelas.png">`
+        }
+        else if (avaliacao > 2.5 && avaliacao <= 3) {
+        resultado.innerHTML = `<img src="./duas_estrelas_e_meia.png">`
+        }
+        else if (avaliacao > 3 && avaliacao <= 3.5) {
+        resultado.innerHTML = `<img src="./tres_estrelas.png">`
+        }
+        else if (avaliacao > 3.5 && avaliacao <= 4) {
+        resultado.innerHTML = `<img src="./tres_estrelas_e_meia.png">`
+        }
+        else if (avaliacao > 4 && avaliacao <= 4.5) {
+        resultado.innerHTML =  `<img src="./quatro_estrelas.png">`
+        }
+        else if (avaliacao > 4.5 && avaliacao < 5) {
+        resultado.innerHTML =  `<img src="./quatro_estrelas_e_meia.png">`
+        }
+        else if (avaliacao = 5) {
+        resultado.innerHTML = `<img src="./cinco_estrelas.png">`
+        }
+    }
+</script>
