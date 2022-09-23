@@ -18,9 +18,10 @@
     function pode_brincar() {
         var idade = Number(valor_idade.value);
         var peso = Number(valor_peso.value);
-        if (idade > 15 && peso > 100)
+        if (idade > 15 && peso < 100)
         resultado.innerHTML = `Você poderá brincar`
-        else if (idade < 15 && peso < 100)
+        else {
         resultado.innerHTML = ` Você não poderá brincar`
+        }
     }
 </script>
