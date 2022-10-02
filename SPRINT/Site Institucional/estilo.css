@@ -1,0 +1,19 @@
+.cabecalho {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    background-image: url(../Assets/img/fundo.png);
+    background-color: black;
+}
+
+nav {
+    height: 750px;
+    
+}
+
+
+
+

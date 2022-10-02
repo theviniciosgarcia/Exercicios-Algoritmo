@@ -20,11 +20,11 @@
         var temperatura = Number(valor_temperatura.value);
         var umidade = Number(valor_umidade.value);
 
-        if (umidade <= 0 || umidade >= 100) {
+        if (umidade < 0 || umidade > 100) {
         alert("Valor de umidade inválido")
         }
 
-        else if (temperatura == 22 || temperatura == 23 && umidade <= 60) {
+        else if ((temperatura >= 22 && temperatura <= 23) && umidade < 60) {
         div_resultado.innerHTML = `Clima agradável`
         }
         else {
