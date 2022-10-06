@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Solicite um numero: <input id="valor_numero">
+    Solicite uma frase: <input id="valor_frase">
+    <button onclick="papagaio()">PAPAGAIO</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function papagaio() {
+    var numero = Number(valor_numero.value)
+    var frase = (valor_frase.value)
+    var qtd_numeros = 1
+    if (frase.length < 3) {
+    alert(`Erro`)
+    }
+    else {
+    while (qtd_numeros <= numero) {
+    alert(`${frase}`)
+    qtd_numeros += 1
+    }
+}
+}
+</script>

@@ -14,11 +14,13 @@
 
 <script>
     function cabalisticos() {
-    var numeros = 0
-    while (numeros <= 15)
-    if (numeros == 4) {
-    resultado.innerHTML += `${numeros}`
-    numeros += 1
+    var numeros = 1
+    while (numeros <= 15) {
+    if ((numeros != 3) && (numeros != 4) && (numeros != 7) && (numeros != 10) && (numeros != 12)) {
+    resultado.innerHTML += `${numeros}<br>`
     }
+    numeros += 1
+}
+    
 }
 </script>
