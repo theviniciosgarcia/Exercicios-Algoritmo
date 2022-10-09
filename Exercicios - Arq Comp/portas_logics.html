@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Esta Chovendo: <select id="a">
+        <option value="1">TRUE</option>
+        <option value="0">FALSE</option>
+    </select>
+    Tenho Dinheiro <select id="b">
+        <option value="1">TRUE</option>
+        <option value="0">FALSE</option>
+    </select>
+    Tenho Tempo: <select id="c">
+        <option value="1">TRUE</option>
+        <option value="0">FALSE</option>
+    </select>
+    Gosto de nuggets: <select id="d">
+        <option value="1">TRUE</option>
+        <option value="0">FALSE</option>
+    </select>
+
+    <button onclick="verificar()">VERIFICAR</button>
+    Mc Donnalts: <div id="resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function verificar() {
+        var A = Boolean(Number(a.value));
+        var B = Boolean(Number(b.value));
+        var C = Boolean(Number(c.value));
+        var D = Boolean(Number(d.value));
+
+        var condicaoA = (!A && !B && C && !D);
+        var condicaoB = (!A && !B && C && D);
+        var condicaoC = (!A && B && C && D);
+        var condicaoD = (A && !B && C && D);
+        var condicaoE = (A && B && C && D);
+
+        if (condicaoA || condicaoB || condicaoC || condicaoD || condicaoE) {
+            resultado.innerHTML = `VERDADEIRO`
+        }
+        else {
+            resultado.innerHTML = `FALSO`
+        }
+    }
+</script>

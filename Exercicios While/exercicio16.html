@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantas pessoas entrou no carro: <input id="input_pessoas">
+    <button onclick="partiu_carona()">PARTIU CARONA</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function partiu_carona() {
+    var pessoas = Number(input_pessoas.value)
+    var contador = 1
+    while (contador <= pessoas) {
+    if (contador == 1) {
+    resultado.innerHTML += `Entrou o ${contador}º passageiro, que é o motorista <br>`
+    }
+    else if (contador >= 6){
+    resultado.innerHTML += `o ${contador}º passageiro vai ter que esperar <br>`
+    }
+    else {
+    resultado.innerHTML += `Entrou o ${contador}º passageiro <br>`
+    }
+    contador += 1
+    }
+    }
+</script>

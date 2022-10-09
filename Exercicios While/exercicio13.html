@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos dias faz musculação: <input id="input_dias">
+    <button onclick="exibir_rotina()">EXIBIR ROTINA MENSAL</button>
+    <div id="resultado"></div>
+
+</body>
+</html>
+<script>
+    function exibir_rotina() {
+    var dias = Number(input_dias.value)
+    var contador = 0
+    var dia_mes = 30
+    var treino  = 'Musculação'
+    while (contador <= dia_mes) {
+    if (contador % dias == 0) {
+    contador++
+    resultado.innerHTML += `${contador} - ${treino} <br>`
+    }
+    else {
+    contador++
+    resultado.innerHTML += `${contador} - Comer, dormir etc <br>`
+    }
+}
+    }
+</script>

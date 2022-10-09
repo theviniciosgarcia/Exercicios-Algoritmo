@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Solicitar Idade: <input id="input_idade" onkeyup="fase_da_vida()">
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function fase_da_vida() {
+    resultado.innerHTML = ``
+    var idade = Number(input_idade.value)
+    var contador = 1
+    while (contador <= idade) {
+    if (contador <= 4) {
+    resultado.innerHTML += `${contador} - anos (Primeira Infância) <br>`
+    }
+    else if (contador <= 6) {
+    resultado.innerHTML += `${contador} - anos (Pré-escolar) <br>`
+    }
+    else if (contador <= 10) {
+    resultado.innerHTML += `${contador} - anos (Segunda Infância) <br>`
+    }
+    else if (contador <= 18) {
+    resultado.innerHTML += `${contador} - anos (Adolecencia) <br>`
+    }
+    else if (contador <= 50) {
+    resultado.innerHTML += `${contador} - anos (Adulto) <br>`
+    }
+    else if (contador <= 100) {
+    resultado.innerHTML += `${contador} - anos (Melhor Idade) <br>`
+    }
+    else {
+    resultado.innerHTML += `${contador} - anos (Ancião) <br>`
+    }
+    contador += 1
+}  
+    }
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="curto_2_e_5()">CURTO 2 E 5</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function curto_2_e_5() {
+    var contador = 0
+    var contFinal = 100
+    while (contador < contFinal) {
+    contador += 1
+    if (contador % 3 == 0 && contador % 5 == 0) {
+    resultado.innerHTML += `É TRI!É PENTA! <br>`
+    }
+    else if (contador % 3 == 0) {
+    resultado.innerHTML += `É TRI <br>`
+    }
+    else if (contador % 5 == 0) {
+    resultado.innerHTML += `É PENTA <br>`
+    }
+    else {
+    resultado.innerHTML += `${contador} <br>`
+    }
+    }
+    }
+</script>

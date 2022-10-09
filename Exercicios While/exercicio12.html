@@ -19,21 +19,25 @@
         <option value="9">9</option>
     </select>
     <button onclick="ver_tabuada()">VER TABUADA</button>
-    <div id="resultado"><span style="color: blue;"></span></div>
+    <div id="resultado"></div>
     
 </body>
 </html>
 
 <script>
     function ver_tabuada() {
-        var combo = tabuada.value
-        var conta = (input_tabuada.value)
+        var combo = Number(tabuada.value)
+        var conta = Number(input_tabuada.value)
         var contador = 0
-        while (conta <= contador)
-        if (contador % 2 == 0)
-        resultado.innerHTML += `<span style="color: blue;">${contador} X ${conatdor} = ${contador} </span>`
-        else {
-        resultado.innerHTML += ``
+        while (contador <= conta) {
+        if (contador % 2 == 0) {
+        resultado.innerHTML += `<span style="color: blue">${combo} X ${contador} = ${combo*contador} </span> <br>`
         }
-    }
+        else {
+        resultado.innerHTML += `<span style="color: red">${combo} X ${contador} = ${combo*contador} </span> <br>`
+        }
+        contador += 1
+      }
+      
+}
 </script>
