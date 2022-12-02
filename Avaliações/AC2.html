@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Quantidade de energia: <input id="input_energia"> <br>
+    Quantidade de clones: <input id="input_clones"> <br>
+    Quantidade de clones por linha: <input id="input_clones_linha"> <br>
+    <button onclick="criar_clones()">CRIAR CLONES</button>
+    <div id="resultado"></div>
+</body>
+
+</html>
+
+<script>
+    function criar_clones() {
+        var energia = Number(input_energia.value);
+        var clones = Number(input_clones.value);
+        var clonesPorLinha = Number(input_clones_linha.value)
+        var chacra = (energia - clones * 20)
+        var contador = 0
+        if (energia < 20 || energia > 5000) {
+            alert("ERRO NA ENTRADA DE DADOS – Energia tem que ser entre 20 e 5.000. Quantidade de Clones tem que ser entre 0 e 250. Quantidade de Clones por linha tem que ser maior que 0")
+        }
+        else if (clones < 0 || clones > 250) {
+            alert("ERRO NA ENTRADA DE DADOS – Energia tem que ser entre 20 e 5.000. Quantidade de Clones tem que ser entre 0 e 250. Quantidade de Clones por linha tem que ser maior que 0")
+        }
+        else if (clonesPorLinha < 0) {
+            alert("ERRO NA ENTRADA DE DADOS – Energia tem que ser entre 20 e 5.000. Quantidade de Clones tem que ser entre 0 e 250. Quantidade de Clones por linha tem que ser maior que 0")
+        }
+        else if (energia >= clones * 20) {
+            resultado.innerHTML = `Energia insuficiente para fazer tal quantidade de clones`
+        }
+        while (contador <= clones) {
+            resultado.innerHTML += `<img src = "https://th.bing.com/th/id/OIP.nYVCDg2kOWF-X6PSxi9FoQHaFb?w=272&h=199&c=7&r=0&o=5&pid=1.7">`
+            if (energia > 1000 && contador > 50) {
+                resultado.innerHTML = `ANALISE DE GERADOR DE CLONES <br> Energia Inicial: ${energia} <br> Qtd de clones: ${contador} <br> Sobra de Energia: ${chacra} <br> PROVAVELMENTE VOCE VAI GANHAR`
+            }
+            else if (energia > 500 && contador >= 20 || contador <= 50) {
+                resultado.innerHTML = `ANALISE DE GERADOR DE CLONES <br> Energia Inicial: ${energia} <br> Qtd de clones: ${contador} <br> Sobra de Energia: ${chacra} <br> A LUTA VAI SER MUITO BOA`
+            }
+            else {
+                resultado.innerHTML = `ANALISE DE GERADOR DE CLONES <br> Energia Inicial: ${energia} <br> Qtd de clones: ${contador} <br> Sobra de Energia: ${chacra} <br> TORÇA PARA O ADVERSÁRIO SER FRAQUINHO`
+            }
+            contador += 1
+        }
+    }
+</script>

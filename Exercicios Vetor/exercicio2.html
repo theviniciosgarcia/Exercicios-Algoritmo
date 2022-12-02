@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o nome do local: <input id="input_nome">
+    <button onclick="cadastrar_local()">Cadastrar Local</button> <br>
+
+    Digite apena um número: <input id="input_numero">
+    <button onclick="relembrar_viagem()">Relembrar viagem</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+       var viagem = []
+    function cadastrar_local() {
+       var local = input_nome.value;
+       viagem.push(local);
+    }
+       
+    function relembrar_viagem() {
+       var contador = Number(input_numero.value);
+
+
+       if (contador <= viagem.length) {
+        resultado.innerHTML = viagem[contador - 1];
+       }
+       else {
+        resultado.innerHTML =`Você não fez uma ${contador}ª viagem!`
+       }
+       
+
+    }
+</script>

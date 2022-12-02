@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Codígo do produto: <input id="input_codigo"> <br>
+    Nome do produto: <input id="input_produto"> <br>
+    Quantidade em estoque: <input id="input_quantidade"> <br>
+    <button onclick="salvar_produto()">Salvar Produto</button>
+    <button onclick="ver_estoque()">Ver Estoque</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    var lista_produto = [];
+    function salvar_produto() {
+    const produto = {
+        "codigo" : input_codigo.value,
+        "nome_produto" : input_produto.value,
+        "quantidade" : Number(input_quantidade.value)
+    }
+
+        if (produto.codigo == "") {
+            alert("Código inválido para o produto")
+        } else if (produto.nome_produto == "") {
+            alert("Nome inválido para o produto")
+        } else if (produto.quantidade == "") {
+            alert("Quantidade inválida para o produto")
+        }
+        else {
+            var produto_existente = false;
+        for (var posicao= 0; posicao < lista_produto.length; posicao++){
+           if (produto.codigo == lista_produto[posicao].codigo){
+               lista_produto[posicao].quantidade += produto.quantidade;
+               resultado.innerHTML += `O produto de código ${lista_produto[posicao].codigo} teve sua quantidade aumentada<br>`
+               produto_existente = true;
+           }
+        }
+
+        if (!produto_existente) {
+            lista_produto.push(produto);
+            resultado.innerHTML += `Produto cadastrado com sucesso<br>`
+            
+        }
+    }
+    }
+
+function ver_estoque(){
+    for(var posicao = 0; posicao < lista_produto.length; posicao++){
+          
+          resultado.innerHTML += `
+          Código: ${lista_produto[posicao].codigo}<br>
+          Nome: ${lista_produto[posicao].nome_produto}<br>
+          Quantidade: ${lista_produto[posicao].quantidade}<br>
+          <br>
+          `
+           
+    }
+}
+
+</script>

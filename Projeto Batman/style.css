@@ -1,0 +1,80 @@
+body {
+    overflow-x: hidden;
+}
+
+button {
+    background-color: #FF0404;
+    height: 30px;
+    width: 80px;
+}
+
+nav {
+    background-color: black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.cabecalho {
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    width: 60vw;
+}
+
+
+.LoginCadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+}
+
+.telaInicial {
+    background-image: url("../Projeto Individual/assets/Inicial home.jpg");
+    background-size: 210vh;
+    height: 100vh;
+}
+
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url("../Projeto Individual/assets/Tela 2 Joker.jpg");
+    background-size: 210vh;
+    height: 100vh;
+}
+
+.logoJogo
+
+.textoJogo {
+    background-color: black;
+    display: flex;
+    text-align: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    height: 55vh;
+    width: 45vw;
+    font-size: 30px;
+}

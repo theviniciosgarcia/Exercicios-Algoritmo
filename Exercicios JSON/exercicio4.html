@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Responsavel</h3>
+    <input placeholder="Insira o nome" type="" name="" id="input_nome_resp"> <br>
+    <input placeholder="Insira o sobrenome" type="" name="" id="input_sobrenome_resp"> <br>
+
+    <h3>Aluno</h3>
+    <input placeholder="Insira o nome" type="" name="" id="input_nome_alu"> <br>
+    <input placeholder="Insira o sobrenome" type="" name="" id="input_sobrenome_alu"> <br>
+
+    <button onclick="exibir()">Exibir Informações</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function exibir() {
+        var responsavel = {
+            nome: input_nome_resp.value,
+            sobrenome: input_sobrenome_resp.value,
+        }
+
+        var aluno = {
+            nome: input_nome_alu.value, 
+            sobrenome: input_sobrenome_alu.value,
+        }
+
+        
+        resultado.innerHTML = `<br>Responsavel: ${responsavel.nome} ${responsavel.sobrenome}`
+
+
+        responsavel.identidade = {
+            tipo: "RG",
+            numero: 1234567890
+        }
+
+        resultado.innerHTML += `<br>Identidade: ${responsavel.identidade.tipo}`;
+
+        resultado.innerHTML += `<br>Aluno: ${aluno.nome} ${aluno.sobrenome}`
+    }
+</script>

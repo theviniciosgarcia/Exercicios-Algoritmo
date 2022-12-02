@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Cadastrar Aluno: <input id="input_cadastrar_aluno">
+    <button onclick="cadastrar()">Cadastrar</button>
+    <button onclick="pesquisar()">Pesquisar</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    var lista_alunos = [];
+    function cadastrar() {
+        resultado.innerHTML = ""
+        var alunos = input_cadastrar_aluno.value;
+        for (var posicao = 0;
+             posicao < lista_alunos.length;
+            posicao++) {
+            lista_alunos.push(alunos);
+            }
+}
+
+    function pesquisar() {
+        var alunos = input_cadastrar_aluno.value;
+        var aluno_existente = false;
+        for (var posicao = 0;
+            posicao == lista_alunos.length;
+            posicao++) {
+        var aluno_na_lista = lista_alunos[posicao]
+        if (aluno_na_lista == alunos) {
+            aluno_existente == true;
+            alert("O Aluno ${aluno_existente} apareceu ${aluno_na_lista} vezes")
+        }                
+        }
+    }
+</script>

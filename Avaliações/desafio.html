@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Nome do astronauta: <input id="input_nome"> <br>
+    Quantidade de dias: <input id="input_dias"> <br>
+    Quantidade de horas: <input id="input_horas"> <br>
+    Quantidade de minutos: <input id="input_minutos"> <br>
+    <button onclick="registrar_viagem()">Registar Viagem</button> <br>
+    <button onclick="relatorio_de_viagens()">Relatorio de Viagens</button> <br>
+    <div id="resultado"></div>
+</body>
+
+</html>
+
+<script>
+    var lista_astronauta = []
+    var lista_viagens = []
+    function registrar_viagem() {
+        var astronauta = input_nome.value;
+        var dias = Number(input_dias.value);
+        var horas = Number(input_horas.value);
+        var minutos = Number(input_minutos.value);
+        var ano = Number((1440 * dias + 60 * horas + minutos) / 525600);
+        if (dias > 0 || horas > 0 || minutos > 0) {
+            lista_viagens.push(ano);
+            lista_astronauta.push(astronauta);
+        }
+        else {
+            alert("Informe um tempo de viagem válido!")
+        }
+    }
+
+    function relatorio_de_viagens() {
+
+        for (var registro = 0;
+            registro < lista_viagens.length;
+            registro++)
+            if (lista_viagens[registro] <= 13) {
+                resultado.innerHTML += `Viagem ${registro + 1}: <br>
+                                        Astronauta ${lista_astronauta[registro]} ficou fora por pelo menos ${lista_viagens[registro]} anos no tempo da Terra. <br>
+                                        A criança que nasceu quando ele saiu provavelmente está assim: <br> <img src="../Avaliações/assets/bart1.png"> <br>`
+            } else if (lista_viagens[registro] > 13 && lista_viagens[registro] <= 30) {
+                resultado.innerHTML += `Viagem ${registro + 1}: <br>
+                                        Astronauta ${lista_astronauta[registro]} ficou fora por pelo menos ${lista_viagens[registro]} anos no tempo da Terra. <br>
+                                        A criança que nasceu quando ele saiu provavelmente está assim: <br> <img src="../Avaliações/assets/bart2.png"> <br>`
+            } else if (lista_viagens[registro] > 30 && lista_viagens[registro] <= 65) {
+                resultado.innerHTML += `Viagem ${registro + 1}: <br>
+                                        Astronauta ${lista_astronauta[registro]} ficou fora por pelo menos ${lista_viagens[registro]} no tempo da Terra. <br>
+                                        A criança que nasceu quando ele saiu provavelmente está assim: <br> <img src="../Avaliações/assets/bart3.png"> <br>`
+            } else if (lista_viagens[registro] > 65 && lista_viagens[registro] <= 100) {
+                resultado.innerHTML += `Viagem ${registro + 1}: <br>
+                                        Astronauta ${lista_astronauta[registro]} ficou fora por pelo menos ${lista_viagens[registro]} anos no tempo da Terra. <br>
+                                        A criança que nasceu quando ele saiu provavelmente está assim: <br> <img src="../Avaliações/assets/velho1.png"> <br>`
+            } else if (lista_viagens[registro] > 100) {
+                resultado.innerHTML += `Viagem ${registro + 1}: <br>
+                                        Astronauta ${lista_astronauta[registro]} ficou fora por pelo menos ${lista_viagens[registro]} anos no tempo da Terra. <br>
+                                        A criança que nasceu quando ele saiu provavelmente está assim: <br> <img src="../Avaliações/assets/velho2.png"> <br>`
+            }
+    }
+</script>

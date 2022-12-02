@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     Quantos onibus precisa pegar: <input id="input_onibus">
     Quantos trem precisa pegar: <input id="input_trem">
@@ -13,53 +15,54 @@
     <button onclick="partiu_trajeto()">#PARTIUTRAJETO</button>
     <div id="resultado"></div>
 </body>
+
 </html>
 
 <script>
     function partiu_trajeto() {
-    var onibus = Number(input_onibus.value)
-    var trem = Number(input_trem.value)
-    var metro = Number(input_metro.value)
-    var contador = 1
-    while (contador <= onibus) {
-    if (contador <= 1) {
-    resultado.innerHTML += `<span style="color: red"> Pegando o ${contador} onibus</span> <br>`
+        var onibus = Number(input_onibus.value)
+        var trem = Number(input_trem.value)
+        var metro = Number(input_metro.value)
+        var contador = 1
+        while (contador <= onibus) {
+            if (contador <= 1) {
+                resultado.innerHTML += `<span style="color: red"> Pegando o ${contador} onibus</span> <br>`
+            }
+            else if (contador == 2) {
+                resultado.innerHTML += `<span style="color: red"> Pegando o ${contador} onibus - Ja começando a cansar</span> <br>`
+            }
+            else if (contador >= 3) {
+                resultado.innerHTML += `<span style="color: red"> Pegando o ${contador} onibus - Ja cansado</span> <br>`
+            }
+            contador += 1
+        }
+        contador = 1
+        while (contador <= trem) {
+            if (contador <= 1) {
+                resultado.innerHTML += `<span style="color: green"> Pegando o ${contador} trem</span> <br>`
+            }
+            else if (contador == 2) {
+                resultado.innerHTML += `<span style="color: green"> Pegando o ${contador} trem - Ja começando a cansar</span> <br>`
+            }
+            else if (contador >= 3) {
+                resultado.innerHTML += `<span style="color: green"> Pegando o ${contador} trem - Ja cansado</span> <br>`
+            }
+            contador += 1
+        }
+        contador = 1
+        while (contador <= metro) {
+            if (contador <= 1) {
+                resultado.innerHTML += `<span style="color: blue"> Pegando o ${contador} metro</span> <br>`
+            }
+            else if (contador == 2) {
+                resultado.innerHTML += `<span style="color: blue"> Pegando o ${contador} metro - Ja começando a cansar</span> <br>`
+            }
+            else if (contador >= 3) {
+                resultado.innerHTML += `<span style="color: blue"> Pegando o ${contador} metro - Ja cansado</span> <br>`
+            }
+            contador += 1
+        }
+        contador = 1
+
     }
-    else if (contador == 2) {
-    resultado.innerHTML += `<span style="color: red"> Pegando o ${contador} onibus - Ja começando a cansar</span> <br>`
-    }
-    else if (contador >= 3) {
-    resultado.innerHTML += `<span style="color: red"> Pegando o ${contador} onibus - Ja cansado</span> <br>`
-    }
-    contador += 1
-    }
-    contador = 1
-    while (contador <= trem) {
-    if (contador <= 1) {
-    resultado.innerHTML += `<span style="color: green"> Pegando o ${contador} trem</span> <br>`
-    }
-    else if (contador == 2) {
-    resultado.innerHTML += `<span style="color: green"> Pegando o ${contador} trem - Ja começando a cansar</span> <br>`
-    }
-    else if (contador >= 3) {
-    resultado.innerHTML += `<span style="color: green"> Pegando o ${contador} trem - Ja cansado</span> <br>`
-    }
-    contador += 1
-    }  
-    contador = 1
-    while (contador <= metro) {
-    if (contador <= 1) {
-    resultado.innerHTML += `<span style="color: blue"> Pegando o ${contador} metro</span> <br>`
-    }
-    else if (contador == 2) {
-    resultado.innerHTML += `<span style="color: blue"> Pegando o ${contador} metro - Ja começando a cansar</span> <br>`
-    }
-    else if (contador >= 3) {
-    resultado.innerHTML += `<span style="color: blue"> Pegando o ${contador} metro - Ja cansado</span> <br>`
-    }
-    contador += 1
-    }
-    contador = 1
-    
-}
 </script>

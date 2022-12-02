@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tênis Clube</title>
+    <style>
+      body {
+        display: flex;
+        align-items: stretch;
+      }
+
+      body div:first-child,
+      body div:nth-of-type(2) {
+        padding: 8px;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+      }
+
+      body div:nth-of-type(2) {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="input_qtd_partidas"> Rodadas máximas: </label>
+      <input id="input_qtd_partidas" /><br />
+
+      <h3>Registrar partidas</h3>
+
+      <label for="input_pts_primeiro_jogador">Pontos Jogador 1:</label>
+      <input id="input_pts_primeiro_jogador" /> <br />
+
+      <label for="input_pts_segundo_jogador">Pontos Jogador 2:</label>
+      <input id="input_pts_segundo_jogador" /> <br />
+
+      <button onclick="realizar_partida()">Realizar partida</button>
+
+      <h3>Informe as partidas que deseja relembrar</h3>
+
+      <label for="input_inicio_intervalo">Início:</label>
+      <input id="input_inicio_intervalo" />
+      <label for="input_fim_intervalo">Fim:</label>
+      <input id="input_fim_intervalo" />
+
+      <button onclick="relembrar_partidas()">Relembrar</button>
+    </div>
+    <div>
+      <h3>Painel</h3>
+      <div id="div_painel"></div>
+    </div>
+  </body>
+</html>
+<script>
+    lista_registar_partidas = []
+    lista_registar_rodadas = []
+    function realizar_partida() {
+        var rodadas_maximas = Number(input_qtd_partidas.value);
+        var pontos_jogador_1 = Number(input_pts_primeiro_jogador.value);
+        var pontos_jogador_2 = Number(input_pts_segundo_jogador.value);
+
+        if (rodadas_maximas > 0) {
+            lista_registar_rodadas.push(rodadas_maximas);
+        } else {
+            alert("Número de partidas inválido")
+            
+        } if (rodadas_maximas <= lista_registar_partidas) {
+            lista_registar_rodadas.push(rodadas_maximas);
+        } else {
+        for (var posicao = 0;
+             posicao < lista_registar_partidas.length;
+             posicao++) {
+                lista_registar_partidas.push(pontos_jogador_1, pontos_jogador_2);
+                lista_registar_rodadas.push(rodadas_maximas);
+                div_painel.innerHTML += `${lista_registar_rodadas[posicao]} Rodada <br>
+                                         Jogador 1: ${lista_registar_partidas[posicao]} <br>
+                                         Jogador 2: ${lista_registar_partidas[posicao]} <br>`
+             }
+
+    }
+}
+
+    function relembrar_partidas() {
+        var rodadas_maximas = Number(input_qtd_partidas.value);
+        var pontos_jogador_1 = Number(input_pts_primeiro_jogador.value);
+        var pontos_jogador_2 = Number(input_pts_segundo_jogador.value);
+        var inicio_intervalo = Number(input_inicio_intervalo.value);
+        var fim_intervalo = Number(input_fim_intervalo.value);
+        var inicio_intervalo = Number(input_inicio_intervalo.value);
+        var fim_intervalo = Number(input_fim_intervalo.value);
+        
+        for (var posicao = 0;
+             posicao < fim_intervalo;
+             posicao++) {
+            if (posicao >= inicio_intervalo &&
+                posicao <= fim_intervalo)
+                div_painel.innerHTML = `${lista_registar_rodadas[posicao]} Rodada <br>
+                                         Jogador 1: ${lista_registar_partidas[posicao]} <br>
+                                         Jogador 2: ${lista_registar_partidas[posicao]} <br>`  
+             }
+
+    }
+</script>

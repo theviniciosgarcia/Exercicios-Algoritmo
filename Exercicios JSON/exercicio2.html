@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Insira o nome" type="" name="" id="input_nome"> <br>
+    <input placeholder="Insira o sobrenome" type="" name="" id="input_sobrenome"> <br>
+    <input placeholder="Insira o idade" type="" name="" id="input_idade"> <br>
+    <button onclick="exibir()">Exibir Informações</button>
+    <div id="resultado"></div>
+    
+</body>
+</html>
+
+<script>
+    function exibir() {
+        var nome = input_nome.value;
+        var sobrenome = input_sobrenome.value;
+        var idade = Number(input_idade.value);
+
+        var pessoa = {
+            nome: input_nome.value,
+            sobrenome: sobrenome,
+            idade: idade
+        }
+
+        var ano = "2003"
+
+        resultado.innerHTML = `<br> Nome: ${pessoa.nome} ${pessoa.sobrenome}`;
+        resultado.innerHTML += "<br> Nascimento: " + (ano - pessoa.idade);
+    }
+</script>

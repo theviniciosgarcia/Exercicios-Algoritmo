@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe seu R.A: <input id="input_ra"> <br>
+    Informe seu nota: <input id="input_nota"> <br>
+    Informe Valor "P" ou "I": <input id="input_valor"> <br>
+    <button onclick="guardar()">Guardar</button>
+    <button onclick="analisar()">Analisar</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    var lista_ra = []
+    var lista_nota = []
+    function guardar() {
+        var nota = Number(input_nota.value);
+        var ra = Number(input_ra.value);
+        var valor = input_valor.value;
+        for (var posicao = 0;
+             posicao < lista_ra.length;
+             posicao++) {
+             lista_ra.push(ra);
+             lista_nota.push(nota);
+             }
+    }
+
+    function analisar() {
+        var notas_alunos = 0;
+        var todos_alunos = 0;
+        var valor = input_valor.value;
+        if (valor != "P" && valor != "I") {
+            alert("valor invalido, entre com P ou I.")
+        } else if (valor == "P") {
+          for (var posicao = 0;
+               posicao < lista_ra.length;
+               posicao++) {
+               if (lista_ra[posicao] % 2 == 0) {
+                notas_alunos += lista_nota[posicao];
+                todos_alunos += 1;
+               }
+            }        
+        }
+
+        else if (valor == "I") {
+          for (var posicao = 0;
+               posicao < lista_ra.length;
+               posicao++) {
+               if (lista_ra[posicao] % 2 != 0) {
+                notas_alunos += lista_nota[posicao];
+                todos_alunos += 1;
+               }
+               }
+    }
+    var media = notas_alunos / todos_alunos;
+    var todos_acima = 0
+    var acima_da_media = 0;
+
+    if (notas_alunos >= media) {
+       for (posicao = 0;
+            posicao < lista_ra.length;
+            posicao++) {
+                acima_da_media += lista_nota[posicao];
+                todos_acima += 1;
+                resultado.innerHTML = `Aluno com RA = ${lista_ra[posicao]} e nota ${lista_nota[posicao]} foi selecionado pois a média é ${media} <br>`
+            }
+    }
+    var media_da_media = acima_da_media / todos_acima;
+    resultado.innerHTML += `Quantidade de notas acima da média ${todos_acima}, e a nova média: ${media_da_media}`
+    
+
+}
+</script>

@@ -34,24 +34,35 @@
     function transformacoes() {
         var frase = ipt_frase.value
 
+
+        //*comprimento do meu texto frase [a posição que eu quero] posição do 0 ao ...//*
         span_primeira_letra = frase[0];
 
+
+        //*pega a ultima letra//*
         span_ultima_letra = frase[frase.length - 1];
 
+        //*frase[math.floor(frase.length-1) pega a ultima letra] //
+
+        //*frase[math.floor(frase.ceil/2) arreddondar pra cima/ pegar a letra do meio]//
+
+        //legth//
+
+        //frase.indexOf - mostra a posição da letra//
         if (frase.indexOf("@") > -1) {
             span_tem_arroba.innerHTML = "Tem arroba !"
         }
         else {
             span_tem_arroba.innerHTML = "Não tem arroba !"
         }   
-
+        //frase.startsWith - começa com isso//
         if (frase.startsWith('a') == true) {
           span_comeca_correto.innerHTML = 'Sim'
         }
         else {
           span_comeca_correto.innerHTML = 'Não'
         }
-
+        //frase.endsWith - termina com isso//
         if (frase.endsWith('.com.br') == true) {
           span_termina_correto.innerHTML = 'Sim'
         }
@@ -61,8 +72,17 @@
 
         span_letra_trocada.innerHTML = frase.replace("a")
         span_todas_letras_trocadas.innerHTML = frase.replaceAll("e")
-
+        //frase.toLowerCase() - deixar em minusculo
         frase_minusculo.innerHTML = frase.toLowerCase()
+        //frase.toUpperCase() - deixar em maiusculo
         frase_maiusculo.innerHTML = frase.toUpperCase()
+
+        //console.log - ver resultados no console//
+
+        //frase.thim() - tira espaço branco tanto no começo, tanto no final//
+
+        //frase.replace('a','2') - trocar isso '',por ''//
+
+        //frase.replaceAll -//
     }
 </script>
